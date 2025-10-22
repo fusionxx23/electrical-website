@@ -16,11 +16,14 @@ import Footer from "../components/Footer.astro";
     <title>Astro Basics</title>
   </head>
 
-  <body class="font-inter relative">
-    <Header />
-    <slot />
+  <body class="font-inter min-h-screen flex flex-col justify-between relative">
+    <div>
+      <Header />
+      <slot />
+    </div>
+
+    <Footer />
   </body>
-  <Footer />
 </html>
 
 <style>
