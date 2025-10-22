@@ -1,31 +1,33 @@
 ---
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
-];
 const phoneNumber = "+1 (555) 123-4567";
-import { ServiceDropdown } from "../components/service-dropdown";
+import { Image } from "astro:assets";
+import { MenuLinks } from "./menu-links.tsx";
+import logoTransparent from "../images/logo-transparent.png";
 ---
 
-<nav style="width:100%; background:#fff; border-bottom:1px solid #eee;">
-  <div class="flex justify-center py-4 items-center w-[1200px] mx-auto">
+<nav class="w-full border-b">
+  <div
+    class="grid grid-cols-3 justify-center py-4 items-center w-[1400px] mx-auto"
+  >
     <!-- Left: Logo -->
-    <div style="flex:1;">
+    <div>
       <a
         href="/"
         style="font-weight:bold; font-size:1.25rem; color:#333; text-decoration:none;"
       >
-        MyLogo
+        <Image
+          src="/logo.png"
+          src={logoTransparent}
+          alt="Company Logo"
+          width="150"
+          height="50"
+        />
       </a>
     </div>
     <!-- Center: Links -->
 
     <div class="flex justify-center items-center">
-      <a href="">Contact</a>
-
-      <ServiceDropdown />
+      <MenuLinks />
     </div>
     <!-- Right: Phone Number -->
     <div style="flex:1; text-align:right;">
