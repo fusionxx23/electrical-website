@@ -23,7 +23,7 @@ export const ServiceDropdown = (props: {}) => {
           </div>
         </MenuLink>
       </div>
-      <div className="absolute left-0 pt-1 w-40 origin-top-left   opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition duration-150 ease-in-out z-10">
+      <div className="absolute z-30 left-0 pt-1 w-40 origin-top-left   opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition duration-150 ease-in-out z-10">
         <div className="bg-white border border-gray-200 rounded-md shadow-lg">
           <div className="py-1">
             <a
