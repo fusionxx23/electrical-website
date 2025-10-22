@@ -1,27 +1,31 @@
 ---
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' }
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/contact", label: "Contact" },
 ];
-const phoneNumber = '+1 (555) 123-4567';
+const phoneNumber = "+1 (555) 123-4567";
+import { ServiceDropdown } from "../components/service-dropdown";
 ---
 
 <nav style="width:100%; background:#fff; border-bottom:1px solid #eee;">
-  <div  class="flex justify-center py-4 items-center w-[1200px] mx-auto">
+  <div class="flex justify-center py-4 items-center w-[1200px] mx-auto">
     <!-- Left: Logo -->
     <div style="flex:1;">
-      <a href="/" style="font-weight:bold; font-size:1.25rem; color:#333; text-decoration:none;">
+      <a
+        href="/"
+        style="font-weight:bold; font-size:1.25rem; color:#333; text-decoration:none;"
+      >
         MyLogo
       </a>
     </div>
     <!-- Center: Links -->
-    <div style="flex:1; text-align:center;">
-      {links.map(link => (
-        <a href={link.href} style="margin:0 1rem; color:#333; text-decoration:none;">
-          {link.label}
-        </a>
-      ))}
+
+    <div class="flex justify-center items-center">
+      <a href="">Contact</a>
+
+      <ServiceDropdown />
     </div>
     <!-- Right: Phone Number -->
     <div style="flex:1; text-align:right;">
