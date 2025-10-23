@@ -5,9 +5,9 @@ import { MenuLinks } from "./menu-links.tsx";
 import logoTransparent from "../images/logo-transparent.png";
 ---
 
-<nav class="w-full border-b">
+<nav class="w-full border-b sticky top-0 z-30 bg-white">
   <div
-    class="grid grid-cols-3 justify-center py-4 items-center w-[1400px] mx-auto"
+    class="grid grid-cols-2 lg:grid-cols-3 justify-center py-4 items-center w-full px-4 xl:px-0 xl:w-[1400px] mx-auto"
   >
     <!-- Left: Logo -->
     <div>
@@ -26,12 +26,19 @@ import logoTransparent from "../images/logo-transparent.png";
     </div>
     <!-- Center: Links -->
 
-    <div class="flex justify-center items-center">
+    <div class="hidden lg:flex justify-center items-center">
       <MenuLinks />
     </div>
     <!-- Right: Phone Number -->
-    <div style="flex:1; text-align:right;">
+    <div class="flex gap-x-2 items-center justify-end">
       <span style="color:#333;">{phoneNumber}</span>
+      <button class="cursor-pointer lg:hidden">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="6" width="16" height="2" fill="currentColor"></rect>
+          <rect x="4" y="11" width="16" height="2" fill="currentColor"></rect>
+          <rect x="4" y="16" width="16" height="2" fill="currentColor"></rect>
+        </svg>
+      </button>
     </div>
   </div>
 </nav>
